@@ -1,0 +1,424 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    background: linear-gradient(to left, #030731,#073c3f);
+    min-width: 100vh;
+}
+#home_tab {
+    overflow: hidden;
+}
+#home_tab ul {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#home_tab ul li {
+    list-style-type: none;  
+    padding: 1%;
+}
+#home_tab ul li a {
+    display:block;
+    cursor: pointer;
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 110%; 
+}
+#home_tab ul li a:after {
+    content: '';
+    display: block;
+    width: 0;
+    height: 2px;
+    background: white;
+    transition: width .3s;
+}
+#home_tab ul li a:hover:after {
+    width: 100%;
+}
+.sticky {
+    position: fixed;
+    top: 0;
+    width: 100%;
+}
+#back1 {
+    overflow: hidden;
+    width: 100%;
+    height: 0;
+    background: transparent;
+    backdrop-filter: blur(15px);
+    position: fixed;
+    z-index: 3;
+    top: 0;
+    left: 0;
+}
+#back2 {
+    width: 30%;
+    padding: 60px;
+    background: black;
+    border-radius: 30px;
+    margin-top: 10%;
+    margin-right: auto;
+    margin-left: auto;
+}
+#back3 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 30px;
+}
+#back3 * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+#back4 {
+        position: relative;
+}
+#inp_txt {
+    width: 100%;
+    border-radius: 10px;
+    border: 1px solid #414141;
+    background: black;
+    color: white;
+    padding: 15px
+}
+#mail_span {
+    position: absolute;
+    color: #414141;
+    left: 0;
+    padding: 15px;
+    transition: 0.2s;
+    text-transform: uppercase;
+    pointer-events: none;
+}
+#password_span {
+    position: absolute;
+    color: #414141;
+    left: 0;
+    padding: 15px;   
+    transition: 0.2s;
+    pointer-events: none;
+}
+#inp_txt:valid ~ #mail_span,
+#inp_txt:focus ~ #mail_span,
+#inp_txt:hover ~ #mail_span {
+    transform: translateX(5px) translateY(-10px);
+    color: rgb(43, 103, 160);
+    background: black;
+    padding: 0 10px;
+}
+#inp_txt:valid ~ #password_span,
+#inp_txt:focus ~ #password_span,
+#inp_txt:hover ~ #password_span {
+    transform: translateX(5px) translateY(-10px);
+    color: rgb(43, 103, 160);
+    background: black;
+    padding: 0 10px;
+}
+#btn1 {
+    width: 100px;
+    padding: 10px;
+    border-radius: 20px;
+    color: black;
+    cursor: pointer;
+    background: linear-gradient(to left, #3d0742, #073c3f, #04093f);
+    background-size: 200%;
+    transition: 0.3s;
+    border-style: none;
+}
+#btn1:hover {
+    background-position: right;
+}
+#close_signin_btn {
+    color: white;
+    padding: 10px;
+    font-size: 40px;
+    float: right;
+    cursor: pointer;
+    margin-top: -10%;
+}
+#close_signin_btn:hover {
+    color:rgb(43, 103, 160);
+}
+#left_bar1 {
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 100%;
+    overflow: hidden;
+    position: fixed;
+    z-index: 2;
+}
+#left_bar1 {
+    opacity: 0.9;
+    background: transparent;
+    backdrop-filter: blur(15px);
+}
+#left_bar2 {    
+    margin-top: 30%;
+    padding: 10%;
+}
+#left_bar2 * {
+    box-sizing: border-box;
+}
+#left_bar2 ul {
+    display: flex;    
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 20px;
+}
+#left_bar2 ul li {
+    list-style-type: none;
+}
+#left_bar2 ul li a {
+    text-decoration: none;
+    color: white;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 20px;
+    cursor: pointer;
+}
+#left_bar2 ul li a:after {
+    content: '';
+    display: block;
+    width: 0;
+    height: 2px;
+    background: white;
+    transition: width .3s;
+}
+#left_bar2 ul li a:hover:after {
+    width: 100%;
+}
+#close_left_bar1 {
+    color: white;
+    padding: 10px;
+    font-size: 50px;
+    cursor: pointer;
+    float: right;
+}
+#close_left_bar1:hover {
+    color:rgb(75, 160, 209);
+}
+@media(max-width: 1000px) {
+    body {
+        width: 1000px;
+        height: 1000px;
+        background-color: black;
+    }
+    #manufacture_water p {
+        font-family:'Courier New', Courier, monospace;
+        position: absolute;
+    }
+    #manufacture_water p {
+        margin-top: 70%;
+        position: absolute;
+        color: white;
+        padding: 50px;
+        font-size: 30px;
+        background: linear-gradient(to left, #080f2e, #073c3f);
+    }
+    #manufacture_water h1 {
+        font-weight: bold;
+        position: relative;
+        top: -5%;
+        padding: 50px;
+        background: linear-gradient(to left, #134217, #0a6d72);
+    }
+    #left_bar2 {
+        text-align: center;
+    }
+    #back2 {
+        width: 300px;
+    }
+}
+
+#source1 {
+    box-sizing: border-box;
+    height: 100%;
+    width: 100%;
+}
+#waterspark {
+    z-index: 2;
+    width: 100%;
+    position: fixed;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    bottom: -70px;
+}
+#waterspark img {
+    animation: bubble 7s linear infinite;
+    pointer-events: none;
+}
+@keyframes bubble {
+    0% {
+        transform: translateY(0);
+        opacity: 0;
+    }
+    25% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 1;
+    }
+    75% {
+        opacity: 1;
+    }
+    100% {
+        transform: translateY(-80vh);
+        opacity: 0;
+    }
+}
+#waterspark img:nth-child(1) {
+    animation-delay: 1s;
+    width: 32px;
+}
+#waterspark img:nth-child(2) {
+    animation-delay: 5.6s;
+    width: 25px;
+}
+#waterspark img:nth-child(3) {
+    animation-delay: 2.3s;
+    width: 33px;
+}
+#waterspark img:nth-child(4) {
+    animation-delay: 6s;
+    width: 21px;
+}
+#waterspark img:nth-child(5) {
+    animation-delay: 2s;
+    width: 27px;
+}
+#waterspark img:nth-child(6) {
+    animation-delay: 3s;
+    width: 2px;
+}
+#waterspark img:nth-child(7) {
+    animation-delay: 6.1s;
+    width: 34px;
+}
+#manufacture_water p {
+    font-family:'Courier New', Courier, monospace;
+}
+#manufacture_water {
+    box-sizing: border-box;
+}
+#manufacture_water p {
+    color: white;
+    padding: 50px;
+    font-size: 20px;
+    background: linear-gradient(to left, #080f2e, #073c3f);
+}
+#manufacture_water h1 {
+    font-weight: bold;
+    padding: 50px;
+    background: linear-gradient(to left, #134217, #0a6d72);
+}
+#cube {
+    height: 400px;
+    width: 400px;
+    transform-style: preserve-3d;
+    animation: cube_ani 4s linear infinite;
+}
+#cube2 {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    transform-style: preserve-3d;
+}
+#cube2 span {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(#01031b,#073c3f);
+    transform: rotateY(calc(90deg * var(--a))) translateZ(200px);
+}
+#top {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 400px;
+    height: 400px;
+    transform-style: preserve-3d;
+    background: #030733;
+    transform: rotateX(90deg) translateZ(200px);
+}
+@keyframes cube_ani {
+    0% {
+        transform: rotateX(-20deg) rotateY(0deg);
+    }
+    100% {
+        transform: rotateX(-20deg) rotateY(360deg);
+    }
+}
+.container1 {
+    padding: 5px;
+}
+.container2:after {
+    content: '';
+    display: table;
+    clear: both;
+}
+.container66 {
+    float: left;
+    width: 50%;
+    padding: 100px;
+}
+.container34 {
+    float: left;
+    width: 50%;
+    padding: 100px;
+}
+#triangle {
+    width: 300px;
+    height: 300px;
+    transform-style: preserve-3d;
+    animation: triangle_ani 4s linear infinite;
+}
+@keyframes triangle_ani {
+    0% {
+        transform: rotateX(30deg) rotateY(0deg);
+    }
+    100% {
+        transform: rotateX(30deg) rotateY(360deg);
+    }
+}
+#triangle2 {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    transform-style: preserve-3d;
+}
+#triangle2 span {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(#073c3f, #3d0742);
+    transform: rotateY(calc(120deg * var(--b))) translateZ(85px);
+}
+#second {
+    background-color: #04093f,#073c3f;
+}
+#triangle_top {
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    position: absolute;
+    background: linear-gradient(#073c3f, #3d0742);
+    transform: rotateX(90deg) translateZ(150px) translateY(-10px);
+    clip-path: polygon(50% 0, 0 80%, 80% 80%);
+}
